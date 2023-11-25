@@ -1,0 +1,47 @@
+.searchBar {
+  width: 100%;
+  margin-top: -3.75rem;
+  display: grid;
+  grid-template-columns: 1fr .15fr;
+  gap: .5rem;
+}
+
+.searchBar input {
+  background-color: var(--gray-500);
+  padding: 1rem;
+
+  font-size: 1rem;
+
+  border-radius: 8px;
+  border: 1px solid var(--Gray-700, #0D0D0D);
+
+  color: var(--white);
+}
+
+.searchBar button {
+  width: 100%;
+  background-color: var(--blue-dark);
+  border-radius: 8px;
+  border: 0;
+  padding: 8px;
+
+  font-size: 0.875rem;
+  color: var(--white);
+
+  transition: background-color .2s;
+
+  &:hover {
+    background-color: var(--blue);
+    cursor: pointer;
+  }
+}
+
+.searchBar button svg {
+  margin-bottom: -1px;
+}
+
+@media (max-width: 598px) {
+  .searchBar button svg {
+    display: none;
+  }
+}

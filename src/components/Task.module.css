@@ -1,0 +1,101 @@
+.task {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  padding: 1rem;
+  gap: 0.75rem;
+
+  background: var(--gray-500);
+  border-radius: 8px;
+  border: 1px solid var(--gray-400);
+
+  margin-bottom: 0.75rem;
+
+  position: relative;
+}
+
+.customCheckbox input {
+  /* Add if not using autoprefixer */
+  -webkit-appearance: none;
+  appearance: none;
+  /* For iOS < 15 to remove gradient background */
+  background-color: #fff;
+  /* Not removed via appearance */
+  margin: 0;
+
+  width: 1.5rem;
+  height: 1.5rem;
+  color: var(--white);
+  border-radius: 50%;
+  border: 3px solid var(--blue);
+  background: transparent;
+
+  display: grid;
+  place-content: center;
+
+  cursor: pointer;
+}
+
+.customCheckbox input:checked {
+  background: var(--purple-dark);
+  border: none;
+}
+
+.customCheckbox input::before {
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+  transform: scale(0);
+  transition: 60ms transform ease-in-out;
+  box-shadow: inset 1em 1em var(--form-control-color);
+  transform-origin: bottom left;
+  
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+
+  background: var(--white);
+}
+
+.customCheckbox input:hover {
+  background: var(--blue-dark);
+  opacity: 0.8;
+}
+
+.customCheckbox input:checked::before {
+  transform: scale(1);
+}
+
+.customCheckbox input:checked:hover {
+  background: var(--purple);
+  opacity: 1;
+}
+
+.customCheckbox input:focus {
+  outline: none;
+}
+
+.task h1 {
+  width: 100%;
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: var(--white);
+}
+
+.task h1.completed {
+  text-decoration: line-through;
+  color: var(--gray-300);
+}
+
+.task svg {
+  color: var(--gray-300);
+  cursor: pointer;
+  outline: 4px solid transparent;
+  transition: 0.2s;
+}
+
+.task svg:hover {
+  color: var(--red);
+  outline: 4px solid var(--gray-400);
+  background: var(--gray-400);
+}

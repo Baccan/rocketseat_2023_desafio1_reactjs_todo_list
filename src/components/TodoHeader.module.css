@@ -1,0 +1,35 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+  margin-bottom: 1.5rem;
+}
+
+.totalTasks {
+  font-size: 87.5%;
+  font-weight: 700;
+  color: var(--blue);
+  display: flex;
+}
+
+.doneTasks {
+  font-size: 87.5%;
+  font-weight: 700;
+  color: var(--purple);
+  display: flex;
+} 
+
+.counter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 2px 8px;
+  
+  background: var(--gray-400);
+  border-radius: 10px;
+  margin-left: 0.5rem;
+
+  color: var(--white);
+}
